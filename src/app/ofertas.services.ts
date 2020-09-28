@@ -1,11 +1,11 @@
 import { Oferta } from './shared/oferta.model'
 export class OfertasService {
 
-  public ofertas: Array<Oferta> = [
+  public ofertas: Oferta[] = [
       {
         id: 1,
         categoria: "restaurante",
-        titulo: "Super Burger",
+        titulo: "Super Burger Big",
         descricao_oferta: "Rodízio de Mini-hambúrger com opção de entrada.",
         anunciante: "Original Burger",
         valor: 29.90,
