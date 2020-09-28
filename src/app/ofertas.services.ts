@@ -1,3 +1,5 @@
+import { resolve } from 'dns'
+import { promise } from 'protractor'
 import { Oferta } from './shared/oferta.model'
 export class OfertasService {
 
@@ -54,5 +56,14 @@ export class OfertasService {
   public getOfertas(): Array<Oferta>{
   
     return this.ofertas
+  }
+  public getOfertas2(): Promise<Oferta[]>{
+    return new Promise((resolve, reject) => {
+      //algum tipo de processamento, que ao finalizar chama resolved ou reject
+      //console.log('passou por aqui')
+      resolve(this.ofertas) 
+    })
+
+
   }
 }
