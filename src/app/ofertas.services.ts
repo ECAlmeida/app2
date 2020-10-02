@@ -11,7 +11,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class OfertasService {
   //injetando o HTTPCLIENT
-  url = 'http://localhost:3000/ofertas'
+  url = 'http://localhost:3000/ofertas?destaque=true'
 
   constructor(private http: HttpClient){}
 
