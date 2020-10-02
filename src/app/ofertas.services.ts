@@ -22,7 +22,7 @@ export class OfertasService {
   //obtem todas as ofertas
 
   getOfertas(): Observable<any[]>{
-  
+ 
     //return this.ofertas
     //efetuar uma requisicao http
     return this.http.get<any[]>(this.url)

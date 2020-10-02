@@ -15,9 +15,25 @@ export class HomeComponent implements OnInit {
   
 
   ngOnInit() {
+    this.getOfertas()
+  //  this.ofertas = this.ofertas;
+  }
+  
+    getOfertas() {
+      //this.ofertasService.getOfertas().subscribe (response => console.log('teste'))
+      this.ofertasService.getOfertas().subscribe((ofertas: Oferta[]) => {
+        this.ofertas = ofertas;
+
+        
+      });
+     }
+    
+    
+    
+    
     //this.ofertas = this.ofertasService.getOfertas()
     //console.log(this.ofertas)
-    this.ofertasService.getOfertas()
+    //this.ofertasService.getOfertas()
     //.then((ofertas: Oferta[])=>{
      //   this.ofertas = ofertas
      // })
@@ -26,6 +42,6 @@ export class HomeComponent implements OnInit {
     //  console.log(param)
     //})
  
-  }
+  
 
 }
